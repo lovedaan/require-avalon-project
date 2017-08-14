@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>require 的使用</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <script type="text/javascript" src="lib/require/require.js"></script>
+    <script type="text/javascript" src="util/requireConfig.js"></script>
+    <style type="text/css">
+      #div1{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background:red;
+      }
+    </style>
+</head>
+<body ms-controller="mainController">
+    <div class="box">
+        <!-- Navbar start -->
+    		<div ms-include-src="navController" data-include-replace="true"></div>
+    		<!-- Navbar end -->
+        <div class="container">
+            <form>
+              <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" class="form-control" id="username" aria-describedby="emailHelp" ms-duplex="username" placeholder="请输入用户名">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">密码</label>
+                <input type="password" class="form-control" ms-duplex="password" id="exampleInputPassword1" placeholder="请输入密码">
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" ms-duplex-checked="isRememberPassword" />
+                  记住密码
+                </label>
+              </div>
+              <p>
+                <button type="button" class="btn btn-primary" ms-click="submittForm">登录</button>
+              </p>
+            </form>
+            <div id="div1"></div>
+        </div>
+        <!-- Footerbar start -->
+        <div ms-include-src="footerController" data-include-replace="true"></div>
+        <!-- Footerbar end -->
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>require 的使用</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <script type="text/javascript" src="lib/require/require.js"></script>
+    <script type="text/javascript" src="util/requireConfig.js"></script>
+</head>
+<body ms-controller="mainController">
+    <div class="box">
+        <!-- Navbar start -->
+    		<div ms-include-src="navController" data-include-replace="true"></div>
+    		<!-- Navbar end -->
+        <div class="container">
+          <h1 class="page-header">新闻页面</h1>
+          <div class="row">
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th class="text-center">ID</th>
+                  <th class="text-center">First Name</th>
+                  <th class="text-center hidden-xs">Last Name</th>
+                  <th class="text-center">Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="text-center">1</th>
+                  <td class="text-center">Mark</td>
+                  <td class="text-center hidden-xs">Otto</td>
+                  <td class="text-center">@mdo</td>
+                </tr>
+                <tr>
+                  <th class="text-center">2</th>
+                  <td class="text-center">Jacob</td>
+                  <td class="text-center hidden-xs">Thornton</td>
+                  <td class="text-center">@fat</td>
+                </tr>
+                <tr>
+                  <th class="text-center">3</th>
+                  <td class="text-center">Larry</td>
+                  <td class="text-center hidden-xs">the Bird</td>
+                  <td class="text-center">@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Footerbar start -->
+        <div ms-include-src="footerController" data-include-replace="true"></div>
+        <!-- Footerbar end -->
+    </div>
+    <script type="text/javascript" src="js/news.js"></script>
+</body>
+</html>
